@@ -16,3 +16,5 @@
 Route::get('/', 'ImportController@getImport')->name('import');
 Route::post('/import_parse', 'ImportController@parseImport')->name('import_parse');
 Route::post('/import_process', 'ImportController@processImport')->name('import_process');
+Route::get('/check_import', 'ImportController@checkImport')->name('check_imp');
+Route::post('/checked_import', 'ImportController@checkImported')->name('checked_import');

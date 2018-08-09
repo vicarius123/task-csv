@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 use App\Http\Requests\CsvImportRequest;
+use Illuminate\Support\Facades\DB;
 
 
 class ImportController extends Controller
@@ -40,5 +41,15 @@ class ImportController extends Controller
     $request->session()->flush();
     return view('import_success', compact('id'));
 
+  }
+
+  public function checkImport(){
+    return view('check_imp');
+  }
+  public function checkImported(Request $request){
+    $id = $request->id;
+    $order = DB::table('csv_imports')->select('id', 'order_info')->where('id','=',$id)->get();
+
+    return view('checked_imp', compact('order'));
   }
 }

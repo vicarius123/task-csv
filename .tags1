@@ -4,7 +4,5 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-fine	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^    <? $fine = true; foreach($csv_data as $keys=>$row):$/;"	variable	line:23
-fine	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^        $fine = false;$/;"	variable	line:26
-key	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^          foreach($row as $key => $value):$/;"	variable	line:28
-required	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^            $required = ($key==0||$key==1||$key==2||$key==3)?'required':'';$/;"	variable	line:29
+orders	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/checked_imp.blade.php	/^$orders = json_decode($order[0]->order_info);$/;"	variable	line:8
+oder_id	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/checked_imp.blade.php	/^$oder_id = $order[0]->id;$/;"	variable	line:9
