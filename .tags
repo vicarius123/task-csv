@@ -1,0 +1,32 @@
+CsvTable	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_101733_csv_table.php	/^class CsvTable extends Migration$/;"	class	line:7
+up	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_101733_csv_table.php	/^    public function up()$/;"	function	line:14
+down	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_101733_csv_table.php	/^    public function down()$/;"	function	line:33
+CsvImportRequest	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Requests/CsvImportRequest.php	/^class CsvImportRequest extends FormRequest$/;"	class	line:7
+authorize	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Requests/CsvImportRequest.php	/^    public function authorize()$/;"	function	line:9
+rules	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Requests/CsvImportRequest.php	/^    public function rules()$/;"	function	line:14
+CsvImportRequest	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/CsvImportRequest.php	/^class CsvImportRequest extends FormRequest$/;"	class	line:7
+authorize	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/CsvImportRequest.php	/^    public function authorize()$/;"	function	line:9
+rules	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/CsvImportRequest.php	/^    public function rules()$/;"	function	line:14
+CreateCsvImportsTable	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_103200_create_csv_imports_table.php	/^class CreateCsvImportsTable extends Migration$/;"	class	line:7
+up	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_103200_create_csv_imports_table.php	/^    public function up()$/;"	function	line:14
+down	/Applications/XAMPP/xamppfiles/htdocs/task/database/migrations/2018_08_09_103200_create_csv_imports_table.php	/^    public function down()$/;"	function	line:29
+csvImport	/Applications/XAMPP/xamppfiles/htdocs/task/app/csvImport.php	/^class csvImport extends Model$/;"	class	line:7
+fillable	/Applications/XAMPP/xamppfiles/htdocs/task/app/csvImport.php	/^    public $fillable = ['order_info'];$/;"	variable	line:9
+fillable	/Applications/XAMPP/xamppfiles/htdocs/task/app/csvImport.php	/^    public $fillable = ['order_info'];$/;"	variable	line:9
+ImportController	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^class ImportController extends Controller$/;"	class	line:12
+getImport	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^  public function getImport()$/;"	function	line:14
+parseImport	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^  public function parseImport(CsvImportRequest $request)$/;"	function	line:18
+path	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $path = $request->file('csv_file')->getRealPath();$/;"	variable	line:20
+data	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $data = array_map('str_getcsv', file($path));$/;"	variable	line:21
+csv_data	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $csv_data = array_slice($data, 1);$/;"	variable	line:22
+processImport	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^  public function processImport(Request $request){$/;"	function	line:27
+csv_data	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $csv_data = $request->table;$/;"	variable	line:28
+all_data	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $all_data = json_decode($request->session()->get('table_data'));$/;"	variable	line:29
+key	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^      foreach($csv_data as $key=>$data){$/;"	variable	line:31
+k	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^        foreach($data as $k=>$dt){$/;"	variable	line:33
+saving	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $saving = ['order_info' => json_encode($all_data)];$/;"	variable	line:38
+id	/Applications/XAMPP/xamppfiles/htdocs/task/app/Http/Controllers/ImportController.php	/^    $id = csvImport::create($saving)->id;$/;"	variable	line:39
+fine	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^    <? $fine = true; foreach($csv_data as $keys=>$row):$/;"	variable	line:23
+fine	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^        $fine = false;$/;"	variable	line:26
+key	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^          foreach($row as $key => $value):$/;"	variable	line:28
+required	/Applications/XAMPP/xamppfiles/htdocs/task/resources/views/import_fields.blade.php	/^            $required = ($key==0||$key==1||$key==2||$key==3)?'required':'';$/;"	variable	line:29
