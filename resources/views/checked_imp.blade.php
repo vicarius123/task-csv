@@ -10,7 +10,7 @@ $oder_id = $order[0]->id;
 
 echo '<h1>ORDER ID: '.$oder_id.'</h1>';
 
-echo '<table class="table table-bordered">';
+echo '<table class="table table-bordered table-hover">';
 echo '<thead>
   <th>Name</th>
   <th>QTY</th>
